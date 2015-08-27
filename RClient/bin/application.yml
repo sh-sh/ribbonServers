@@ -1,0 +1,11 @@
+server:
+  port: 8990
+producer:
+  ribbon:
+    Server-List-Refresh-Interval: 2000
+    MaxAutoRetries: 1
+    MaxAutoRetriesNextServer: 1
+    OkToRetryOnAllOperations: true
+    niws.loadbalancer.rclient.connectionFailureCountThreshold: 2
+    niws.loadbalancer.availabilityFilteringRule.filterCircuitTripped: true
+    listOfServers: http://localhost:8991,http://localhost:8992,http://localhost:8993
